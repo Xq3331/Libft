@@ -6,13 +6,13 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:28:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/08 07:08:25 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:27:16 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *d, const void *s, size_t size)
+void	*ft_memmove(void *d, const void *s, size_t size)
 {
 	size_t		i;
 	const char	*s2;

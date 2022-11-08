@@ -6,13 +6,17 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:36:24 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/08 10:31:26 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:28:15 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 
@@ -30,7 +34,7 @@ void	*ft_memset(void	*p, int v, size_t count);
 
 void	ft_bzero(void *s, size_t n);
 
-void	*memmove(void *d, const void *s, size_t size);
+void	*ft_memmove(void *d, const void *s, size_t size);
 
 void	*ft_memcpy(void *d, const void *s, size_t size);
 
@@ -54,8 +58,10 @@ int		ft_memcmp(const void *p1, const void *p2, size_t size);
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t size);
 
-void	*calloc(size_t c, size_t size);
+void	*ft_calloc(size_t c, size_t size);
 
 int		ft_atoi(const char *str);
 
 char	*ft_strdup(const char *s);
+
+#endif

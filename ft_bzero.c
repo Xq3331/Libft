@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:45:59 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/08 08:51:42 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:37:25 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ft_memset(((char *)s)[i], 0, n);
+		ft_memset(s + i, 0, 1);
 		i++;
 	}
-	return (s);
 }
