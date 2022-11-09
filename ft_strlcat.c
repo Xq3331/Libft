@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:04:39 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/08 16:16:56 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:26:59 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,23 @@
 
 size_t	ft_strlcat(char *d, const char *src, size_t size)
 {
-	size_t	i;
 	size_t	y;
+	size_t	i;
 
-	i = 0;
 	y = 0;
-	if (!d)
-		return (src);
-	while (d[y])
-		y++;
-	if (size > 0)
+	i = 0;
+	if ((!(d) || !(src)) && size == 0)
+		return (0);
+	while (d[i])
+		i++;
+	if (i > size)
+		return (ft_strlen(src) + size);
+	while (i < size - 1 && src[y])
 	{
-		while (i < size && src[i])
-		{
-			d[y] = src[i];
-			i++;
-			y++;
-		}
-		d[y] = 0;
+		d[i] = src[y];
+		i++;
+		y++;
 	}
-	return (y);
+	d[i] = '\0';
+	return (i);
 }
