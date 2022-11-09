@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:04:39 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/09 14:26:59 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/09 22:27:45 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *d, const char *src, size_t size)
 
 	y = 0;
 	i = 0;
-	if ((!(d) || !(src)) && size == 0)
+	if ((!d || !src) && size == 0)
 		return (0);
 	while (d[i])
 		i++;
@@ -32,5 +32,5 @@ size_t	ft_strlcat(char *d, const char *src, size_t size)
 		y++;
 	}
 	d[i] = '\0';
-	return (i);
+	return (i + ft_strlen(src + y));
 }
