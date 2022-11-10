@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:53:48 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/09 22:52:48 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:47:50 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,20 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t size)
 	size_t	y;
 
 	i = 0;
-	if (!s2)
-		return ((char *) s1);
-	while (i < size && (unsigned char) s1[i])
+	if ((!s1 || !s2) && size == 0)
+		return (NULL);
+	if (s2[0] == '\0')
+		return ((char *)s1);
+	while (i < size && s1[i])
 	{
 		y = 0;
-		while (((unsigned char *)s1)[i] == ((unsigned char *)s2)[y])
+		while (s1[i + y] == s2[y] && i + y < size)
 		{
+			if (s2[y + 1] == '\0')
+				return ((char *)s1 + i);
 			y++;
-			i++;
 		}
-		if (y == ft_strlen(s2))
-			return ((char *) s1 + i - y);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

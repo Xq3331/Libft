@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:27:42 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/08 10:31:18 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 20:20:49 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,10 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*s2;
-	size_t	i;
+	void	*s2;
 
-	s2 = (char *) malloc((sizeof(char) + 1) * ft_strlen(s));
-	i = 0;
-	while (i < ft_strlen(s))
-	{
-		s2[i] = s[i];
-		i++;
-	}
-	s2[i] = 0;
-	return (s2);
+	s2 = malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (s2 == 0)
+		return (0);
+	return ((char *) ft_memcpy(s2, s, ft_strlen(s) + 1));
 }
