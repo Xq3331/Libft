@@ -6,13 +6,13 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 23:22:40 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/11 02:47:54 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:31:39 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	verif(char s1, char const *set)
+static size_t	verif(char s1, char const *set)
 {
 	size_t	y;
 
@@ -26,7 +26,7 @@ size_t	verif(char s1, char const *set)
 	return (0);
 }
 
-size_t	counter(const char *s1, char const *set)
+static size_t	counter(const char *s1, char const *set)
 {
 	size_t		i;
 	size_t		count;

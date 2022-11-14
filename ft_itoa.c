@@ -6,13 +6,13 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 08:43:31 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/12 14:31:09 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:30:31 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	mcount(long n)
+static int	mcount(long n)
 {
 	int	i;
 

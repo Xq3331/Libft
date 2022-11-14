@@ -6,13 +6,13 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 02:00:45 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/11 16:41:19 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:31:13 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	split_counter(char *s, char c)
+static size_t	split_counter(char *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -34,7 +34,7 @@ size_t	split_counter(char *s, char c)
 	return (count);
 }
 
-char	*ft_splitdup(char *s, size_t start, size_t end)
+static char	*ft_splitdup(char *s, size_t start, size_t end)
 {
 	char	*s2;
 	size_t	i;
@@ -52,7 +52,7 @@ char	*ft_splitdup(char *s, size_t start, size_t end)
 	return (s2);
 }
 
-char	**freee(char **s2, size_t x)
+static char	**freee(char **s2, size_t x)
 {
 	while (x -- > 0)
 		free(s2[x]);
@@ -60,7 +60,7 @@ char	**freee(char **s2, size_t x)
 	return (NULL);
 }
 
-char	**ft_split2(char *s, char c, char **s2)
+static char	**ft_split2(char *s, char c, char **s2)
 {
 	size_t	start;
 	size_t	x;
